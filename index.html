@@ -17,7 +17,7 @@
             color: white;
             padding: 20px 0;
             font-size: 15px; /* Adjust header text size */
-                margin-bottom: 20px; /* Adds space below the header */
+            margin-bottom: 20px; /* Adds space below the header */
         }
         h1 {
             margin: 0;
@@ -70,6 +70,32 @@
             margin-top: 20px; /* Adds space above the section */
         }
 
+        /* Scrolling Banner Styles */
+        .scrolling-banner {
+            background-color: #e74c3c;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .scrolling-banner div {
+            display: inline-block;
+            animation: scroll-banner 10s linear infinite;
+        }
+
+        @keyframes scroll-banner {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
         .sub-header {
             margin-bottom: 10px; /* Adds space between the sub-header items */
         }
@@ -82,14 +108,18 @@
 </header>
     
 <section>
-    <div class="sub-header"><strong>Next Round : Match Week 1</strong></div>
-    <div class="sub-header">Entry Deadline : 8PM on 13/03/2025</div>
+    <!-- Scrolling Banner for the first 2 sub-header -->
+    <div class="scrolling-banner">
+        <div>Next Round: Match Week 1 | Entry Deadline: 8PM on 13/03/2025</div>
+    </div>
+</section>
+
+<section>
     <div class="sub-header"><strong>Points Allocation</strong></div>
     <div class="sub-header">Correct Score = 3Pts</div>
     <div class="sub-header">Correct Result = 1Pts</div>
 </section>
 
-    
 <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSc7_4TipY4aPS27HmhTdOFPJg8VTtJQS3D2wGL5hzPmWOTGEA/viewform?usp=header" class="button-link" target="_blank">Submit a New Entry</a></p>
 <p><a href="" class="button-link">Leaderboard (TBC)</a></p>
     
